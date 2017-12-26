@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{D7724EC9-2F13-F2BA-C6CE-05CFF86BF861}") = "Jogo de tiro", "Assembly-CSharp-firstpass.csproj", "{B6FF0AE9-CF34-DC35-FBC4-402E79164D06}"
+EndProject
+Project("{D7724EC9-2F13-F2BA-C6CE-05CFF86BF861}") = "Jogo de tiro", "Assembly-CSharp.csproj", "{CFA89824-2E24-FD46-1434-EE557CD0B05F}"
+EndProject
+Project("{D7724EC9-2F13-F2BA-C6CE-05CFF86BF861}") = "Jogo de tiro", "Assembly-CSharp-Editor.csproj", "{F909EFE0-4456-3AF0-1ABB-812DD8BB3EB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6FF0AE9-CF34-DC35-FBC4-402E79164D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6FF0AE9-CF34-DC35-FBC4-402E79164D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6FF0AE9-CF34-DC35-FBC4-402E79164D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6FF0AE9-CF34-DC35-FBC4-402E79164D06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFA89824-2E24-FD46-1434-EE557CD0B05F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFA89824-2E24-FD46-1434-EE557CD0B05F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFA89824-2E24-FD46-1434-EE557CD0B05F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFA89824-2E24-FD46-1434-EE557CD0B05F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F909EFE0-4456-3AF0-1ABB-812DD8BB3EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F909EFE0-4456-3AF0-1ABB-812DD8BB3EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F909EFE0-4456-3AF0-1ABB-812DD8BB3EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F909EFE0-4456-3AF0-1ABB-812DD8BB3EB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
