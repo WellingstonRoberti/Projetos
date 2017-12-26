@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Sistema-Mercado" company="RLJSISTEMAS" webLink="http://" view-date="2017-09-14" view-index="0" gantt-divider-location="387" resource-divider-location="300" version="2.8.5" locale="pt_BR">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd3" name="Nome" width="256" order="0"/>
+        <field id="tpd4" name="Data inicial" width="34" order="1"/>
+        <field id="tpd5" name="Data final" width="93" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nome" width="210" order="0"/>
+        <field id="1" name="Função" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="" month="1" date="1" type="HOLIDAY"><![CDATA[New Year's Day]]></date>
+        <date year="" month="4" date="21" type="HOLIDAY"><![CDATA[Tiradentes Day]]></date>
+        <date year="" month="5" date="1" type="HOLIDAY"><![CDATA[Labor Day]]></date>
+        <date year="" month="9" date="7" type="HOLIDAY"><![CDATA[Independence Day]]></date>
+        <date year="" month="10" date="12" type="HOLIDAY"><![CDATA[Lady of Aparecida]]></date>
+        <date year="" month="11" date="1" type="NEUTRAL"><![CDATA[All Saints Day]]></date>
+        <date year="" month="11" date="2" type="HOLIDAY"><![CDATA[All Souls Days]]></date>
+        <date year="" month="11" date="15" type="HOLIDAY"><![CDATA[Republic Day]]></date>
+        <date year="" month="12" date="25" type="HOLIDAY"><![CDATA[Christmas]]></date>
+        <date year="2012" month="2" date="20" type="HOLIDAY"/>
+        <date year="2012" month="2" date="21" type="HOLIDAY"/>
+        <date year="2012" month="4" date="6" type="HOLIDAY"/>
+        <date year="2012" month="4" date="8" type="HOLIDAY"/>
+        <date year="2012" month="6" date="7" type="HOLIDAY"/>
+        <date year="2005" month="3" date="25" type="HOLIDAY"/>
+        <date year="2006" month="4" date="14" type="HOLIDAY"/>
+        <date year="2007" month="2" date="19" type="HOLIDAY"/>
+        <date year="2007" month="2" date="20" type="HOLIDAY"/>
+        <date year="2007" month="4" date="6" type="HOLIDAY"/>
+        <date year="2007" month="6" date="7" type="HOLIDAY"/>
+        <date year="2008" month="3" date="21" type="HOLIDAY"/>
+        <date year="2009" month="4" date="10" type="HOLIDAY"/>
+        <date year="2010" month="4" date="2" type="HOLIDAY"/>
+        <date year="2011" month="4" date="22" type="HOLIDAY"/>
+        <date year="2011" month="4" date="24" type="HOLIDAY"/>
+        <date year="2017" month="2" date="25" type="HOLIDAY"><![CDATA[Carnival]]></date>
+        <date year="2017" month="2" date="26" type="HOLIDAY"><![CDATA[Carnival]]></date>
+        <date year="2017" month="2" date="27" type="HOLIDAY"><![CDATA[Carnival]]></date>
+        <date year="2017" month="2" date="28" type="HOLIDAY"><![CDATA[Carnival]]></date>
+        <date year="2017" month="4" date="14" type="HOLIDAY"><![CDATA[Good Friday]]></date>
+        <date year="2017" month="6" date="15" type="HOLIDAY"><![CDATA[Corpus Christi]]></date>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Diagrama Caso de Uso" color="#8cb6ce" meeting="false" start="2017-08-21" duration="2" complete="100" expand="true"/>
+        <task id="3" name="Diagrama Classe Analise" color="#8cb6ce" meeting="false" start="2017-08-22" duration="2" complete="100" expand="true"/>
+        <task id="5" name="Diagrama Sequencia Analise" color="#8cb6ce" meeting="false" start="2017-08-23" duration="4" complete="100" expand="true"/>
+        <task id="6" name="Documento Requisitos" color="#8cb6ce" meeting="false" start="2017-08-28" duration="2" complete="100" expand="true"/>
+        <task id="17" name="Gerencia de Configuração" color="#8cb6ce" meeting="false" start="2017-09-27" duration="1" complete="100" expand="true"/>
+        <task id="18" name="Diagrama de Classe de Projeto" color="#8cb6ce" meeting="false" start="2017-10-02" duration="13" complete="100" expand="true"/>
+        <task id="19" name="Diagrama de Sequencia de Projeto" color="#8cb6ce" meeting="false" start="2017-10-02" duration="13" complete="100" expand="true"/>
+        <task id="20" name="Atualização dos diagramas anteriores" color="#8cb6ce" meeting="false" start="2017-10-02" duration="13" complete="100" expand="true"/>
+        <task id="21" name="Esquema de Banco de Dados" color="#8cb6ce" meeting="false" start="2017-10-02" duration="13" complete="100" expand="true">
+            <depend id="24" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="22" name="Interfaces do Sistema com validação de campos" color="#8cb6ce" meeting="false" start="2017-10-02" duration="13" complete="0" expand="true"/>
+        <task id="23" name="Conexão com o banco de dados" color="#8cb6ce" meeting="false" start="2017-10-02" duration="13" complete="100" expand="true"/>
+        <task id="24" name="Banco de Dados implementado" color="#8cb6ce" meeting="false" start="2017-10-20" duration="13" complete="100" expand="true"/>
+        <task id="25" name="Controle de acesso e perfil de acesso" color="#8cb6ce" meeting="false" start="2017-10-20" duration="13" complete="100" expand="true"/>
+        <task id="27" name="Sistema completo" color="#8cb6ce" meeting="false" start="2017-10-23" duration="17" complete="0" expand="true"/>
+        <task id="29" name="Teste de unidade do sistema" color="#8cb6ce" meeting="false" start="2017-10-23" duration="17" complete="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Renan Ribeiro" function="SoftwareDevelopment:2" contacts="renan2752@yahoo.com.br" phone=""/>
+        <resource id="1" name="Leticia Ribeiro" function="SoftwareDevelopment:2" contacts="leticia_gribeiro@outlook.com" phone=""/>
+        <resource id="2" name="Wellingston Roberti" function="SoftwareDevelopment:2" contacts="junimduic@hotmail.com" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="0" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="3" resource-id="0" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="5" resource-id="0" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="6" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="25" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="17" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="18" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="3" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="5" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="6" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="22" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="23" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="17" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="19" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="3" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="5" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="6" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="24" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="17" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

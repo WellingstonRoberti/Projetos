@@ -1,0 +1,93 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication10;
+import java.util.Scanner;
+/**
+ *
+ * @author junimRoberti
+ */
+/*
+Lucas, depois que mostramos voce o codigo anterior que usa apenas a diagonal, fiquei na duvida se usava programaçao dinamica,
+entao essa noite quebrei um pouco a cabeça para fazer aquele do pseudocodigo e consegui fazer ele funcionar.
+Tabela:
+
+    L U C A S
+
+   0 1 2 3 4 5
+B  1 1 2 3 4 5
+I  2 2 2 3 4 5
+A  3 3 3 3 3 4
+N  4 4 4 4 4 4
+C  5 5 5 4 5 5
+A  6 6 6 5 4 5  <-- valor da distancia
+
+
+
+
+*/
+public class JavaApplication10 {
+
+ public static int Distancia(String a, String b) {
+        int c;
+	int m = a.length();
+	int n = b.length();
+	int[][] Matriz = new int[m + 1][n + 1];
+	for(int i = 0; i <= m; i++) {//preenche a primeira linha com 0 1 2 3 4 5...
+		Matriz[i][0] = i;
+	}
+	for(int j = 0; j <= n; j++) {//preenche a primeira coluna com 0 1 2 3 4 5....
+		Matriz[0][j] = j;
+	}
+	for(int i = 1; i <= m; i++) {//preenche o resto da tabela com os custos
+            for (int j = 1; j <= n; j++) {
+                if(a.charAt(i-1) == b.charAt(j-1)){//compara caractere com caractere
+                    c=0;
+                }
+                else
+                {
+                    c=1;
+                }
+    		Matriz[i][j] = Math.min(Math.min(Matriz[i - 1][j] + 1,Matriz[i][j - 1] + 1), Matriz[i - 1][j - 1]+c);//decide se remove, substitui, ou insere
+            }
+        }
+	return Matriz[m][n];//retorna o ultimo valor da matriz
+}
+ public static void Menu (){
+        System.out.println(" Menu: ");
+        System.out.println("1 - Calcular distancia de edição: ");
+        System.out.println("0 - Sair");
+    }
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        Menu();
+        int op = input.nextInt();
+        while(op != 0){
+            switch(op){
+                case 1:
+                      String [] dadosRec = new String[2];
+                      for(int x = 0; x < 2; x++){
+                          String dados;
+                          System.out.println("Digite uma palavra:");
+                          dados = scanner.next();
+                          dadosRec[x] = dados;
+                      }
+                      
+                       for (int i = 0; i < dadosRec.length; i += 2)
+                       System.out.println("distancia(" + dadosRec[i] + ", " + dadosRec[i+1] + ") = " + Distancia(dadosRec[i], dadosRec[i+1])); 
+                       break;
+                default:
+                    System.out.println("Opcao Invalida");
+                    break;
+            }
+            Menu();
+            op = input.nextInt();
+        }    
+        
+    }
+    
+}

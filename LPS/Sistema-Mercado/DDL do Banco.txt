@@ -1,0 +1,178 @@
+
+CREATE TABLE Funcionario (
+  codigoFuncionario INT NOT NULL GENERATED ALWAYS AS IDENTITY       (START WITH 1, INCREMENT BY 1),
+  login VARCHAR(45) NOT NULL,
+  senha VARCHAR(45) NOT NULL,
+  tipo INT NOT NULL,
+  nomeFuncionario VARCHAR(45) NOT NULL,
+  PRIMARY KEY (codigoFuncionario))
+;
+
+
+-- -----------------------------------------------------
+-- Table Venda
+-- -----------------------------------------------------
+CREATE TABLE Venda (
+  codigoVenda INT NOT NULL GENERATED ALWAYS AS IDENTITY        (START WITH 1, INCREMENT BY 1),
+  somaVenda DECIMAL(7,2) NOT NULL,
+  formadePagamento VARCHAR(45) NOT NULL,
+  dataVenda VARCHAR(45) NOT NULL,
+  Funcionario_codigoFuncionario INT NOT NULL,
+  PRIMARY KEY (codigoVenda),
+    FOREIGN KEY (Funcionario_codigoFuncionario)
+    REFERENCES Funcionario (codigoFuncionario))
+;
+
+
+-- -----------------------------------------------------
+-- Table Endereco
+-- -----------------------------------------------------
+CREATE TABLE Endereco (
+  codigoEndereco INT NOT NULL GENERATED ALWAYS AS IDENTITY        (START WITH 1, INCREMENT BY 1),
+  rua VARCHAR(45) NOT NULL,
+  numero VARCHAR(45) NOT NULL,
+  bairro VARCHAR(45) NOT NULL,
+  cidade VARCHAR(45) NOT NULL,
+  PRIMARY KEY (codigoEndereco))
+;
+
+
+-- -----------------------------------------------------
+-- Table Fornecedor
+-- -----------------------------------------------------
+CREATE TABLE Fornecedor (
+  CodigoFornecedor INT NOT NULL GENERATED ALWAYS AS IDENTITY        (START WITH 1, INCREMENT BY 1),
+  nomeFornecedor VARCHAR(45) NOT NULL,
+  cpfFornecedor VARCHAR(45) NOT NULL,
+  cnpjFornecedor VARCHAR(45) NOT NULL,
+  telefoneFornecedor VARCHAR(45) NOT NULL,
+  PRIMARY KEY (CodigoFornecedor))
+;
+
+
+-- -----------------------------------------------------
+-- Table Produto
+-- -----------------------------------------------------
+CREATE TABLE Produto (
+  codigoProduto INT NOT NULL GENERATED ALWAYS AS IDENTITY        (START WITH 1, INCREMENT BY 1),
+  nomeProduto VARCHAR(45) NOT NULL,
+  modelo VARCHAR(45) NOT NULL,
+  precoCompra DECIMAL(7,2) NOT NULL,
+  precoVenda DECIMAL(7,2) NOT NULL,
+  dataValidade VARCHAR(45) NOT NULL,
+  PRIMARY KEY (codigoProduto))
+;
+
+
+-- -----------------------------------------------------
+-- Table Estoque
+-- -----------------------------------------------------
+CREATE TABLE Estoque (
+  codigoEstoque INT NOT NULL GENERATED ALWAYS AS IDENTITY        (START WITH 1, INCREMENT BY 1),
+  quantidadeTotal DECIMAL(7,2) NOT NULL,
+  quantidadeAtual DECIMAL(7,2) NOT NULL,
+  PRIMARY KEY (codigoEstoque))
+;
+
+
+-- -----------------------------------------------------
+-- Table NotaFiscal
+-- -----------------------------------------------------
+CREATE TABLE NotaFiscal (
+  codigoNotaFiscal INT NOT NULL GENERATED ALWAYS AS IDENTITY        (START WITH 1, INCREMENT BY 1),
+  Fornecedor_CodigoFornecedor INT NOT NULL,
+  dataCompra VARCHAR(45) NOT NULL,
+  PRIMARY KEY (codigoNotaFiscal),
+    FOREIGN KEY (Fornecedor_CodigoFornecedor)
+    REFERENCES Fornecedor (CodigoFornecedor))
+;
+
+
+-- -----------------------------------------------------
+-- Table Fornecedor_has_Endereco
+-- -----------------------------------------------------
+CREATE TABLE Fornecedor_has_Endereco (
+  Fornecedor_CodigoFornecedor INT NOT NULL,
+  Endereco_codigoEndereco INT NOT NULL,
+  PRIMARY KEY (Fornecedor_CodigoFornecedor, Endereco_codigoEndereco),
+    FOREIGN KEY (Fornecedor_CodigoFornecedor)
+    REFERENCES Fornecedor (CodigoFornecedor)
+    ON DELETE CASCADE,
+    FOREIGN KEY (Endereco_codigoEndereco)
+    REFERENCES Endereco (codigoEndereco))
+;
+
+
+-- -----------------------------------------------------
+-- Table Endereco_has_Funcionario
+-- -----------------------------------------------------
+CREATE TABLE Endereco_has_Funcionario (
+  Endereco_codigoEndereco INT NOT NULL,
+  Funcionario_codigoFuncionario INT NOT NULL,
+  PRIMARY KEY (Endereco_codigoEndereco, Funcionario_codigoFuncionario),
+    FOREIGN KEY (Endereco_codigoEndereco)
+    REFERENCES Endereco (codigoEndereco)
+    ON DELETE CASCADE,
+    FOREIGN KEY (Funcionario_codigoFuncionario)
+    REFERENCES Funcionario (codigoFuncionario))
+;
+
+
+-- -----------------------------------------------------
+-- Table Produto_has_Venda
+-- -----------------------------------------------------
+CREATE TABLE itemVenda (
+  Produto_codigoProduto INT NOT NULL,
+  Venda_codigoVenda INT NOT NULL,
+  PRIMARY KEY (Produto_codigoProduto, Venda_codigoVenda),
+    FOREIGN KEY (Produto_codigoProduto)
+    REFERENCES Produto (codigoProduto),
+    FOREIGN KEY (Venda_codigoVenda)
+    REFERENCES Venda (codigoVenda))
+;
+
+
+-- -----------------------------------------------------
+-- Table Produto_has_NotaFiscal
+-- -----------------------------------------------------
+CREATE TABLE Produto_has_NotaFiscal (
+  Produto_codigoProduto INT NOT NULL,
+  NotaFiscal_codigoNotaFiscal INT NOT NULL,
+  PRIMARY KEY (Produto_codigoProduto, NotaFiscal_codigoNotaFiscal),
+    FOREIGN KEY (Produto_codigoProduto)
+    REFERENCES Produto (codigoProduto)
+    ON DELETE CASCADE,
+    FOREIGN KEY (NotaFiscal_codigoNotaFiscal)
+    REFERENCES NotaFiscal (codigoNotaFiscal)
+    ON DELETE CASCADE)
+;
+
+
+-- -----------------------------------------------------
+-- Table Produto_has_Estoque
+-- -----------------------------------------------------
+CREATE TABLE Produto_has_Estoque (
+  Produto_codigoProduto INT NOT NULL,
+  Estoque_codigoEstoque INT NOT NULL,
+  PRIMARY KEY (Produto_codigoProduto, Estoque_codigoEstoque),
+    FOREIGN KEY (Produto_codigoProduto)
+    REFERENCES Produto (codigoProduto)
+    ON DELETE CASCADE,
+    FOREIGN KEY (Estoque_codigoEstoque)
+    REFERENCES Estoque (codigoEstoque))
+;
+
+
+-- -----------------------------------------------------
+-- Table Fornecedor_has_Produto
+-- -----------------------------------------------------
+CREATE TABLE Fornecedor_has_Produto (
+  Fornecedor_CodigoFornecedor INT NOT NULL,
+  Produto_codigoProduto INT NOT NULL,
+  PRIMARY KEY (Fornecedor_CodigoFornecedor, Produto_codigoProduto),
+    FOREIGN KEY (Fornecedor_CodigoFornecedor)
+    REFERENCES Fornecedor (CodigoFornecedor)
+ON Delete cascade,
+    FOREIGN KEY (Produto_codigoProduto)
+    REFERENCES Produto (codigoProduto))
+;
