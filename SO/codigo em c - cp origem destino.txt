@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+ * 
+ */
+int main(int argc, char* argv[]) {
+    FILE * origem, * destino;
+    char str[255];
+    
+    origem = fopen(argv[1], "r");
+    destino = fopen(argv[2], "w");
+    
+    while (fscanf(origem, "%s", str) != EOF ){
+       fprintf(destino, "%s \n", str);
+    }
+    
+    fclose(origem);
+    fclose(destino);
+    
+    return 0;
+}
+
+
+-------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(int argc, char* argv[]) {
+    FILE *origem, *destino;
+    char str[255];
+    if(argc != 2){
+        puts("Formato invalido!");
+        puts("Use: mycopy origem destino");
+        return 0;
+    }else{
+        origem = fopen(argv[1],"r");
+        destino = fopen(argv[2],"w");
+        int ok=0;
+        if(origem && destino){
+            while (fscanf(origem, "%s", str) != EOF ){
+                fprintf(destino,"%s \n", str);
+                
+            }
+            ok=1;
+        }else{
+            puts("Falha na operação com arquivos \n");
+            fclose(origem);
+            fclose(destino);    
+            return ok;
+        }
+    }
+    return 0;
+}
+
+

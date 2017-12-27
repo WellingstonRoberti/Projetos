@@ -1,0 +1,8 @@
+pwd
+mkdir ~/backup
+cp /bin/* ~/backup
+file ~/backup date
+ls ~/backup
+rm ~/backup
+rmdir ~/backup
+cat /etc/fuse.conf

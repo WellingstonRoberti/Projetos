@@ -1,0 +1,47 @@
+passwd ----------------------------------> alterar senha do usuário logado
+
+passwd usuário ----------------------------------> alterar senha do usuário especificado
+
+sudo comando ----------------------------------> executa comando com privilégio de root
+
+su ----------------------------------> logar como root
+
+su usuário ----------------------------------> logar com usuário específico
+
+adduser usuário ----------------------------------> adicionar usuário
+
+addgroup grupo ----------------------------------> adicionar grupo
+
+addgroup usuário grupo ----------------------------------> incluir usuário no grupo
+
+del user usuário ----------------------------------> remover usuário
+
+del group grupo ----------------------------------> remover grupo
+
+del group usuário grupo ----------------------------------> retirar usuário de grupo
+
+
+Alterar permissões: CHMOD
+
+CHMOD n1 n2 n3 recurso
+
+n1 criador 
+n2 grupo do criador
+n3 outros
+
+
+Tipos de permissão r w x
+
+r -> read
+w -> write
+x -> execute
+
+
+
+
+
+
+
+
+
+

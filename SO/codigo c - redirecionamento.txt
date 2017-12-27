@@ -1,0 +1,19 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+ * 
+ */
+int main(int argc, char** argv) {
+    int x;
+    puts("Informe um valor");
+    while(scanf("%d", &x), x!= -1){        
+       if(x%2==1)
+           puts("ímpar");
+       else
+          puts("par"); 
+    }    
+    return 0;
+}
+

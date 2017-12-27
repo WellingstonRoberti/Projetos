@@ -1,0 +1,6 @@
+mkdir c:\temp
+copy c:\Windons c:\temp 
+copy c:Windows\*.exe c:\temp
+dir c:\temp\??.exe
+del c:\temp
+type c:\windws\win.ini

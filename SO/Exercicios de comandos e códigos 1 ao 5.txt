@@ -1,0 +1,56 @@
+1)exiba as subpasta a partir da raiz de forma ordenada
+R:du | sort -g-r
+
+2)exiba em ordem numérica decrescente o tamanho da pasta c termo "firefox"
+R:du | grep firefox | sort -d -r
+
+3)exiba 10 números aleatórios entre 0 e n de forma crescente,n é esperado pelo teclado, porém alimentado via linha de comando
+obs:o programa guarda de n° aleatórios não faz pro ordenação
+R: 
+
+comando : 
+echo 100 > lim.txt
+./aleatorio.exe < lim.txt | sort -g
+cat dados.txt | sort -g
+
+
+
+4)faça um programa em c que gere 10 nos aleatórios entre 0 e 9
+R:
+
+int main(){
+    srand(time(NULL));
+    puts("Digite um valor para o limite aleatorio");
+    int lim;
+    scanf("%d", &lim);
+	for(int i=1;i<10;i++){
+            printf("%d\n", rand() % lim);
+	}	
+	return 0;
+	
+}
+
+
+
+5)faça um programa em c que classifique indeterminados n° (EOF) como par ou ímpar
+R:
+
+int main(int argc, char** argv) {
+    int x;
+    puts("Informe um valor");
+    while(scanf("%d", &x), x!= -1){        
+       if(x%2==1)
+           puts("ímpar");
+       else
+          puts("par"); 
+    }    
+    return 0;
+}
+
+./aleatorio.exe < lim.txt | sort -g | parimpar.exe
+
+
+
+Exiba na linha de comando 10 números aleatórios ordenados decrescente e classificados como par/ ímpar
+R:
+

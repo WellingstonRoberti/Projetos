@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(int argc, char* argv[]) {
+   
+    FILE *arquivo;
+    char str[255];
+    char *ret;
+    int ok=0;
+    if(argc != 3){
+        puts("Formato invalido!");
+        puts("Use: mycopy origem destino");
+        return 0;
+    }else{
+        arquivo = fopen(argv[2],"r");             if(arquivo){
+            while (fscanf(arquivo, "%s", str) != EOF ){                
+                ret = strstr(str, argv[1]);
+                if(ret != NULL){
+                    printf("%s\n", str);
+                    ok++;
+                }
+            }
+        }else{
+            puts("Falha na operação com arquivos \n");
+            fclose(arquivo);    
+            return ok;
+        }
+    }
+    fclose(arquivo);
+    if(ok!=0){
+        printf("String encontrada %d vezes \n", ok);
+    }else{
+        printf("String não encontrada \n");
+    }
+    return 0;
+}
+
+
