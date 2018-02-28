@@ -149,6 +149,11 @@ public class JfrmRealizaVenda extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadDinheiro);
         jRadDinheiro.setText("Dinheiro");
+        jRadDinheiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadDinheiroActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(jRadCartao);
         jRadCartao.setText("Cartão");
@@ -427,6 +432,10 @@ public class JfrmRealizaVenda extends javax.swing.JFrame {
         }
         jSoma.setText(String.valueOf(soma));
     }//GEN-LAST:event_jRemoverActionPerformed
+
+    private void jRadDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadDinheiroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadDinheiroActionPerformed
 
     /**
      * @param args the command line arguments

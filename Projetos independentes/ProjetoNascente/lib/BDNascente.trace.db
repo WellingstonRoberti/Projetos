@@ -1,0 +1,9 @@
+2018-02-27 09:42:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USODIFERENCIADO" not found; SQL statement:
+SELECT * FROM USODIFERENCIADO [42102-196]
+2018-02-27 09:42:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "NASCENTES" not found; SQL statement:
+SELECT * FROM nascentes [42102-196]
+2018-02-27 09:44:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USODIFERENCIADO" not found; SQL statement:
+SELECT * FROM USODIFERENCIADO [42102-196]

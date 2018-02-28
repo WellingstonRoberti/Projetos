@@ -1,0 +1,3 @@
+2018-02-27 09:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USODIFERENCIADO" not found; SQL statement:
+SELECT * FROM USODIFERENCIADO [42102-196]
